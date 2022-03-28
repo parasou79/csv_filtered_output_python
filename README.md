@@ -12,17 +12,29 @@ Supported Operators are
 *, ^, $, =, # =========> text operators: contains, startswith, endswith, equals to, not equals to
 
 Syntax:
+
 python u1.py CSV_FILENAME FILTER_CONDITION_ON_COLUMN_NUMBERS OUTPUT_COLUMN_NUMBERS
+
 the filters are comma separated and considered as AND conditionals
+
 the OUTPUT columns are also comma separated
 
+
+
 Examples:
+
 Lets say we have employees file and we want to print some text in terminal
+
 Column-0 contains Employee-Code and Column-7 contains Employee-Name, Column-4 contains Employee-DOB
 
 python u1.py skh1.csv "7=PARASOU" 0,7 -- prints empcode & empname whose name equals PARASOU
+
 python u1.py skh1.csv "7$MAN" 7 -- prints empname whose name ends with MAN
+
 python u1.py skh1.csv "0<15000," 7 -- prints empname whose name ends with MAN
+
 python u1.py skh1.csv "7^JL" 0,1,2,3,4,7 -- prints columns 0 to 7 whose name begins with JL
  
+py u1.py skh1.csv 3*2/6/2011 0,1,2 -- prints first 3 columns where column-3 contains the specific date(string)
+
 
