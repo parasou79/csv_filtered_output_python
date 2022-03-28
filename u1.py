@@ -82,7 +82,7 @@ with open( infile ) as ina:
 			if found and op=='#':
 				found = x[a] != b
 			if found and op=='*':
-				found = x[a].contains(b)
+				found = x[a] in (b)
 			if found and op=='^':
 				found = x[a].startswith(b)
 			if found and op=='$':
